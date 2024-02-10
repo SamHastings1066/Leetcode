@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='13. Roman to Integer'/>
+        <page name='14. Longest Common Prefix'/>
+        <page name='20. Valid Parentheses'/>
+        <page name='21. Merge two sorted lists'/>
+        <page name='26. Remove duplicates from sorted array'/>
+        <page name='27. Find the index of the First Occurence in a string'/>
+        <page name='66. Plus One'/>
+        <page name='69. Sqrt'/>
+        <page name='70. Climbing Stairs'/>
+        <page name='88. Merge Sorted Array'/>
+    </pages>
+</playground>
