@@ -11,5 +11,6 @@
         <page name='69. Sqrt'/>
         <page name='70. Climbing Stairs'/>
         <page name='88. Merge Sorted Array'/>
+        <page name='94. Binary tree Inorder Traversal'/>
     </pages>
 </playground>
