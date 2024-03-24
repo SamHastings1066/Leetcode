@@ -12,6 +12,7 @@ public class TreeNode {
     }
 }
 
+// Creates tree from array
 func createTree(fromArray array: [Int?]) -> TreeNode? {
     func createNode(at index: Int) -> TreeNode? {
         if index < array.count, let value = array[index] {
@@ -24,7 +25,8 @@ func createTree(fromArray array: [Int?]) -> TreeNode? {
     }
     return createNode(at: 0)
 }
-    
+
+// Returns array from tree
 func levelOrderTraversal(_ rootNode: TreeNode?) -> [Int?] {
     // We will use an array to simulate a queue for level order traversal.
     var queue = [rootNode]
