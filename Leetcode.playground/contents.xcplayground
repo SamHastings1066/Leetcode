@@ -12,5 +12,7 @@
         <page name='70. Climbing Stairs'/>
         <page name='88. Merge Sorted Array'/>
         <page name='94. Binary tree Inorder Traversal'/>
+        <page name='101. Symmetric Tree'/>
+        <page name='104. Maximum Depth of Binary Tree'/>
     </pages>
 </playground>
