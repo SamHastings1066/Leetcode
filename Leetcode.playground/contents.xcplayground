@@ -14,5 +14,7 @@
         <page name='94. Binary tree Inorder Traversal'/>
         <page name='101. Symmetric Tree'/>
         <page name='104. Maximum Depth of Binary Tree'/>
+        <page name='108. Convert Sorted Array to Binary Search Tree'/>
+        <page name='118. Pascal&apos;s Triangle'/>
     </pages>
 </playground>
