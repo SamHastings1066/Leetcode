@@ -22,5 +22,6 @@
         <page name='141. Linked List Cycle'/>
         <page name='160. Intersection of Two Linked Lists'/>
         <page name='163. Missing Ranges'/>
+        <page name='169. Majority Element'/>
     </pages>
 </playground>
