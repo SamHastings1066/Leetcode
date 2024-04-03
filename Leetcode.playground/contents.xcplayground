@@ -20,5 +20,7 @@
         <page name='125. Valid Palindrome'/>
         <page name='136. Single Number'/>
         <page name='141. Linked List Cycle'/>
+        <page name='160. Intersection of Two Linked Lists'/>
+        <page name='163. Missing Ranges'/>
     </pages>
 </playground>
