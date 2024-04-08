@@ -23,5 +23,8 @@
         <page name='160. Intersection of Two Linked Lists'/>
         <page name='163. Missing Ranges'/>
         <page name='169. Majority Element'/>
+        <page name='171. Excel Sheet Column Number '/>
+        <page name='190. Reverse Bits'/>
+        <page name='191. Number of 1 Bits'/>
     </pages>
 </playground>
