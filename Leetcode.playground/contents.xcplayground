@@ -29,5 +29,7 @@
         <page name='202. Happy Hour'/>
         <page name='206. Reverse Linked List'/>
         <page name='Linked List Functions'/>
+        <page name='217. Contains Duplicate'/>
+        <page name='234. Palindrome Linked List'/>
     </pages>
 </playground>
