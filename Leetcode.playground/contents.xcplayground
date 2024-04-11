@@ -32,5 +32,6 @@
         <page name='217. Contains Duplicate'/>
         <page name='234. Palindrome Linked List'/>
         <page name='242. Valid Anagram'/>
+        <page name='268. Missing Number'/>
     </pages>
 </playground>
