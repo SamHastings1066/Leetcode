@@ -18,23 +18,60 @@ func createLinkedList(from array: [Int]) -> ListNode? {
     return head
 }
 
+// My solution
+//class Solution {
+//    func isPalindrome(_ head: ListNode?) -> Bool {
+//        var arr = [Int]()
+//        var current = head
+//        while current != nil {
+//            arr.append(current!.val)
+//            current = current?.next
+//        }
+//        
+//        while arr.count > 1 {
+//            var first = arr.removeFirst()
+//            var last = arr.removeLast()
+//            if first != last { return false}
+//        }
+//        return true
+//    }
+//}
+
 class Solution {
-    func isPalindrome(_ head: ListNode?) -> Bool {
-        var arr = [Int]()
-        var current = head
-        while current != nil {
-            arr.append(current!.val)
-            current = current?.next
+    
+    func findMid(_ head: ListNode?) -> ListNode? {
+        var fast = head
+        var slow = head
+        while fast?.next != nil && fast?.next?.next != nil {
+            fast = fast?.next?.next
+            slow = slow?.next
         }
-        
-        while arr.count > 1 {
-            var first = arr.removeFirst()
-            var last = arr.removeLast()
-            if first != last { return false}
+        return slow
+    }
+    
+    func reverseList(_ head: ListNode?) -> ListNode? {
+        if head == nil || head?.next == nil { return head }
+        var reversed = reverseList(head?.next)
+        head?.next?.next = head
+        head?.next = nil
+        return reversed
+    }
+    
+    func isPalindrome(_ head: ListNode?) -> Bool {
+        guard head != nil else {return true}
+        var midNode = findMid(head)
+        midNode?.next = reverseList(midNode?.next)
+        var p1 = head
+        var p2 = midNode?.next
+        while p2 != nil {
+            if p1?.val != p2?.val { return false}
+            p1 = p1?.next
+            p2 = p2?.next
         }
         return true
     }
 }
+
 
 var nums = [1,2,2,1]
 var linkedListHeadFromNums = createLinkedList(from: nums)

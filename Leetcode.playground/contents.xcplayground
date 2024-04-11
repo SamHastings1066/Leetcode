@@ -31,5 +31,6 @@
         <page name='Linked List Functions'/>
         <page name='217. Contains Duplicate'/>
         <page name='234. Palindrome Linked List'/>
+        <page name='242. Valid Anagram'/>
     </pages>
 </playground>
