@@ -35,5 +35,6 @@
         <page name='268. Missing Number'/>
         <page name='283. Move zeroes'/>
         <page name='326. Power of Three'/>
+        <page name='344. Reverse String'/>
     </pages>
 </playground>
