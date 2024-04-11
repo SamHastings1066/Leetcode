@@ -38,5 +38,6 @@
         <page name='344. Reverse String'/>
         <page name='350. Intersection of Two Arrays II'/>
         <page name='387. First Unique Character in a String'/>
+        <page name='412. Fizz Buzz'/>
     </pages>
 </playground>
