@@ -36,5 +36,6 @@
         <page name='283. Move zeroes'/>
         <page name='326. Power of Three'/>
         <page name='344. Reverse String'/>
+        <page name='350. Intersection of Two Arrays II'/>
     </pages>
 </playground>
