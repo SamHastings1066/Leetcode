@@ -22,17 +22,15 @@ class Solution {
     func lengthOfLongestSubstring(_ s: String) -> Int {
         var s = Array(s)
         var left = 0
-        var right = 0
         var result = 0
         var charIndex = [Character:Int]()
-        while right < s.count {
+        for right in s.indices {
             var char = s[right]
             if let index = charIndex[char], index >= left, index < right {
                 left = index + 1
             }
             result = max(result, right - left + 1)
             charIndex[char] = right
-            right += 1
             
         }
         

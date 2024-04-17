@@ -3,7 +3,8 @@
     <pages>
         <page name='Linked List Functions'/>
         <page name='2. Add Two Numbers'/>
-        <page name='Untitled Page'/>
         <page name='3. Longest Substring Without Repeating Characters'/>
+        <page name='5. Longest Palindromic Substring'/>
+        <page name='6. Zigzag Conversion'/>
     </pages>
 </playground>
