@@ -6,5 +6,6 @@
         <page name='3. Longest Substring Without Repeating Characters'/>
         <page name='5. Longest Palindromic Substring'/>
         <page name='6. Zigzag Conversion'/>
+        <page name='7. Reverse Integer'/>
     </pages>
 </playground>
