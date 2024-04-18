@@ -7,5 +7,6 @@
         <page name='5. Longest Palindromic Substring'/>
         <page name='6. Zigzag Conversion'/>
         <page name='7. Reverse Integer'/>
+        <page name='8. String to Integer (atoi)'/>
     </pages>
 </playground>
