@@ -56,7 +56,11 @@ class Solution {
         if l1 == nil && l2 == nil && carry == 0 { return nil }
         var sum = (l1?.val ?? 0) + (l2?.val ?? 0) + carry
         carry = sum / 10
-        return .init( sum % 10 , addTwoNumbers(l1?.next, l2?.next))
+        return .init(sum % 10, addTwoNumbers(l1?.next, l2?.next))
+        //let node = ListNode(sum%10)
+        //node.next = addTwoNumbers(l1?.next, l2?.next)
+        //return node
+        
     }
 }
 

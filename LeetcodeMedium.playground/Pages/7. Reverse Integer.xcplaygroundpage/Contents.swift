@@ -7,10 +7,10 @@ class Solution {
         while x != 0 {
             let pop = x % 10
             
-            if ans > Int.max || (ans == Int.max && pop > 7) {
+            if ans > Int32.max / 10 || (ans == Int32.max / 10 && pop > 7) {
                 return 0
             }
-            if ans < Int.min || (ans == Int.min && pop < -8) {
+            if ans < Int32.min / 10 || (ans == Int32.min / 10 && pop < -8) {
                 return 0
             }
             
@@ -24,4 +24,4 @@ class Solution {
 
 
 
-print(Solution().reverse(-120))
+print(Solution().reverse(1534236469))
