@@ -15,5 +15,6 @@
         <page name='19. Remove Nth Node From End of List'/>
         <page name='22. Generate Parentheses'/>
         <page name='29. Divide Two Integers'/>
+        <page name='33. Search in Rotated Sorted Array'/>
     </pages>
 </playground>
