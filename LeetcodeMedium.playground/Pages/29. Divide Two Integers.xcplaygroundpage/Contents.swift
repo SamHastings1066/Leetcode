@@ -59,7 +59,7 @@
 //        }
 //        
 //        return numNegs == 1 ? quotient : -quotient
-//        
+//
 //    }
 //}
 
@@ -110,4 +110,4 @@ let dividend = -2147483648 // ans 2147483647
 let divisor = -1
 
 
-print(Solution().divide(93706, 157))
+print(Solution().divide(-93706, -157))
