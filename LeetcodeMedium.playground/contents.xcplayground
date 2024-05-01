@@ -16,6 +16,7 @@
         <page name='22. Generate Parentheses'/>
         <page name='29. Divide Two Integers'/>
         <page name='34. Find First and Last Position of Element in Sorted Array'/>
+        <page name='36. Valid Sudoku'/>
         <page name='33. Search in Rotated Sorted Array'/>
     </pages>
 </playground>
