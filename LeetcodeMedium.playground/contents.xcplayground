@@ -19,5 +19,6 @@
         <page name='36. Valid Sudoku'/>
         <page name='33. Search in Rotated Sorted Array'/>
         <page name='38. Count and Say'/>
+        <page name='46. Permutations'/>
     </pages>
 </playground>
