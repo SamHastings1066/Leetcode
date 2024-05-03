@@ -20,5 +20,6 @@
         <page name='33. Search in Rotated Sorted Array'/>
         <page name='38. Count and Say'/>
         <page name='46. Permutations'/>
+        <page name='48. Rotate Image'/>
     </pages>
 </playground>
