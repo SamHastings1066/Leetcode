@@ -24,5 +24,6 @@
         <page name='49. Group Anagrams'/>
         <page name='50. Pow(x, n)'/>
         <page name='53. Maximum Subarray'/>
+        <page name='54. Spiral Matrix'/>
     </pages>
 </playground>
