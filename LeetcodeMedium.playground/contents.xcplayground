@@ -29,5 +29,7 @@
         <page name='56. Merge Intervals'/>
         <page name='57. Insert Interval'/>
         <page name='61. Rotate List'/>
+        <page name='64. Minimum Path Sum'/>
+        <page name='71. Simplify Path'/>
     </pages>
 </playground>
