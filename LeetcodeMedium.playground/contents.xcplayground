@@ -31,5 +31,6 @@
         <page name='61. Rotate List'/>
         <page name='64. Minimum Path Sum'/>
         <page name='71. Simplify Path'/>
+        <page name='72. Edit Distance'/>
     </pages>
 </playground>
