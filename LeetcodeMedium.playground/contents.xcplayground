@@ -32,5 +32,7 @@
         <page name='64. Minimum Path Sum'/>
         <page name='71. Simplify Path'/>
         <page name='72. Edit Distance'/>
+        <page name='73. Set Matrix Zeroes'/>
+        <page name='77. Combinations'/>
     </pages>
 </playground>
