@@ -34,5 +34,6 @@
         <page name='72. Edit Distance'/>
         <page name='73. Set Matrix Zeroes'/>
         <page name='77. Combinations'/>
+        <page name='79. Word Search'/>
     </pages>
 </playground>

@@ -43,7 +43,7 @@ class Solution {
             var remain = n - firstNum + 1
             var available = remain - need
             
-            for i in firstNum..<firstNum+available+1 {
+            for i in firstNum...firstNum+available {
                 path.append(i)
                 
                 backtrack(i+1, path)
