@@ -30,37 +30,37 @@
 //}
 
 // Quick Union
-class DisjointSet {
-    var parent: [Int] = []
-    
-    init(size: Int) {
-        for i in 0..<size {
-            parent.append(i)
-        }
-    }
-    
-    func findRoot(_ node: Int) -> Int {
-        var node = node
-        while node != parent[node] {
-            node = parent[node]
-        }
-        return node
-    }
-    
-    func union(_ x: Int, _ y: Int) {
-        var rootX = findRoot(x)
-        var rootY = findRoot(y)
-        if rootX != rootY {
-            parent[rootY] = rootX
-        }
-    }
-    
-    func isConnected(_ x: Int, _ y: Int) -> Bool {
-        return findRoot(x) == findRoot(y)
-    }
-}
+//class DisjointSet {
+//    var parent: [Int] = []
+//    
+//    init(size: Int) {
+//        for i in 0..<size {
+//            parent.append(i)
+//        }
+//    }
+//    
+//    func findRoot(_ node: Int) -> Int {
+//        var node = node
+//        while node != parent[node] {
+//            node = parent[node]
+//        }
+//        return node
+//    }
+//    
+//    func union(_ x: Int, _ y: Int) {
+//        var rootX = findRoot(x)
+//        var rootY = findRoot(y)
+//        if rootX != rootY {
+//            parent[rootY] = rootX
+//        }
+//    }
+//    
+//    func isConnected(_ x: Int, _ y: Int) -> Bool {
+//        return findRoot(x) == findRoot(y)
+//    }
+//}
 
- Union by Rank
+ //Union by Rank
 class DisjointSet {
     var parent: [Int] = []
     var rank: [Int] = []
