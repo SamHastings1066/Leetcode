@@ -23,7 +23,7 @@ func createConnectedGraph(_ edges: [[Int]]) -> Node {
 }
 
 
-// DFS
+// DFS using recursion
 //class Solution {
 //    var visited = [Int:Node]()
 //    func cloneGraph(_ node: Node?) -> Node? {
@@ -45,19 +45,19 @@ func createConnectedGraph(_ edges: [[Int]]) -> Node {
 //    }
 //}
 
-// BFS
+// DFS using explicit stack - notice exatcly th same as BFS, except remove from the end of the stack and not from the begining of the queue
 class Solution {
     
     func cloneGraph(_ node: Node?) -> Node? {
         if let node {
             var visited = [node.val: Node(node.val)]
-            var queue = [node]
-            while !queue.isEmpty {
-                let curr = queue.removeFirst()
+            var stack = [node]
+            while !stack.isEmpty {
+                let curr = stack.removeLast()
                 for n in curr.neighbors {
                     if visited[n!.val] == nil {
                         visited[n!.val] = Node(n!.val)
-                        queue.append(n!)
+                        stack.append(n!)
                     }
                     visited[curr.val]?.neighbors.append(visited[n!.val])
                 }
@@ -66,9 +66,33 @@ class Solution {
         } else {
             return nil
         }
-        
     }
 }
+
+// BFS
+//class Solution {
+//    
+//    func cloneGraph(_ node: Node?) -> Node? {
+//        if let node {
+//            var visited = [node.val: Node(node.val)]
+//            var queue = [node]
+//            while !queue.isEmpty {
+//                let curr = queue.removeFirst()
+//                for n in curr.neighbors {
+//                    if visited[n!.val] == nil {
+//                        visited[n!.val] = Node(n!.val)
+//                        queue.append(n!)
+//                    }
+//                    visited[curr.val]?.neighbors.append(visited[n!.val])
+//                }
+//            }
+//            return visited[node.val]
+//        } else {
+//            return nil
+//        }
+//        
+//    }
+//}
 
 var edges = [[2,4],[1,3],[2,4],[1,3]]
 
