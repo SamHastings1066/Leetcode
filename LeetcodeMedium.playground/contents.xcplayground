@@ -42,5 +42,6 @@
         <page name='130. Surrounded Regions'/>
         <page name='133. Clone Graph'/>
         <page name='399. Evaluate Division'/>
+        <page name='207. Course Schedule'/>
     </pages>
 </playground>
