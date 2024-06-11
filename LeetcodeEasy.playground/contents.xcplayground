@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
+        <page name='Linked List Functions'/>
+        <page name='Tree functions'/>
         <page name='13. Roman to Integer'/>
         <page name='14. Longest Common Prefix'/>
         <page name='20. Valid Parentheses'/>
@@ -28,7 +30,6 @@
         <page name='191. Number of 1 Bits'/>
         <page name='202. Happy Hour'/>
         <page name='206. Reverse Linked List'/>
-        <page name='Linked List Functions'/>
         <page name='217. Contains Duplicate'/>
         <page name='234. Palindrome Linked List'/>
         <page name='242. Valid Anagram'/>
@@ -39,5 +40,6 @@
         <page name='350. Intersection of Two Arrays II'/>
         <page name='387. First Unique Character in a String'/>
         <page name='412. Fizz Buzz'/>
+        <page name='100. Same Tree'/>
     </pages>
 </playground>
