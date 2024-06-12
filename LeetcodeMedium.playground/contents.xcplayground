@@ -46,5 +46,7 @@
         <page name='207. Course Schedule'/>
         <page name='210. Course Schedule II'/>
         <page name='105. Construct Binary Tree from Preorder and Inorder Traversal'/>
+        <page name='106. Construct Binary Tree from Inorder and Postorder Traversal'/>
+        <page name='117. Populating Next Right Pointers in Each Node II'/>
     </pages>
 </playground>
