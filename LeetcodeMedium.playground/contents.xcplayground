@@ -3,6 +3,7 @@
     <pages>
         <page name='Disjoint Set'/>
         <page name='messing'/>
+        <page name='Tree functions'/>
         <page name='Graph functions'/>
         <page name='Linked List Functions'/>
         <page name='2. Add Two Numbers'/>
@@ -43,5 +44,7 @@
         <page name='133. Clone Graph'/>
         <page name='399. Evaluate Division'/>
         <page name='207. Course Schedule'/>
+        <page name='210. Course Schedule II'/>
+        <page name='105. Construct Binary Tree from Preorder and Inorder Traversal'/>
     </pages>
 </playground>
