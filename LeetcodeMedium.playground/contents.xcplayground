@@ -49,5 +49,6 @@
         <page name='106. Construct Binary Tree from Inorder and Postorder Traversal'/>
         <page name='117. Populating Next Right Pointers in Each Node II'/>
         <page name='114. Flatten Binary Tree to Linked List'/>
+        <page name='129. Sum Root to Leaf Numbers'/>
     </pages>
 </playground>

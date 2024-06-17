@@ -42,5 +42,6 @@
         <page name='412. Fizz Buzz'/>
         <page name='100. Same Tree'/>
         <page name='226. Invert Binary Tree'/>
+        <page name='112. Path Sum'/>
     </pages>
 </playground>
