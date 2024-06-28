@@ -54,5 +54,6 @@
         <page name='222. Count Complete Tree Nodes'/>
         <page name='236. Lowest Common Ancestor of a Binary Tree'/>
         <page name='80. Remove Duplicates from Sorted Array II'/>
+        <page name='189. Rotate Array'/>
     </pages>
 </playground>
