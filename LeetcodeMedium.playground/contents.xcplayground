@@ -56,5 +56,7 @@
         <page name='80. Remove Duplicates from Sorted Array II'/>
         <page name='189. Rotate Array'/>
         <page name='122. Best Time to Buy and Sell Stock II'/>
+        <page name='45. Jump Game II'/>
+        <page name='274. H-Index'/>
     </pages>
 </playground>
