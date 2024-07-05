@@ -58,5 +58,6 @@
         <page name='122. Best Time to Buy and Sell Stock II'/>
         <page name='45. Jump Game II'/>
         <page name='274. H-Index'/>
+        <page name='380. Insert Delete GetRandom O(1)'/>
     </pages>
 </playground>
