@@ -45,5 +45,6 @@
         <page name='112. Path Sum'/>
         <page name='27. Remove Element'/>
         <page name='58. Length of Last Word'/>
+        <page name='392. Is Subsequence'/>
     </pages>
 </playground>
