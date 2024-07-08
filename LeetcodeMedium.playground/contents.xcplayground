@@ -61,5 +61,6 @@
         <page name='380. Insert Delete GetRandom O(1)'/>
         <page name='238. Product of Array Except Self'/>
         <page name='134. Gas Station'/>
+        <page name='12. Integer to Roman'/>
     </pages>
 </playground>
