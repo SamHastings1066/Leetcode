@@ -62,5 +62,7 @@
         <page name='238. Product of Array Except Self'/>
         <page name='134. Gas Station'/>
         <page name='12. Integer to Roman'/>
+        <page name='151. Reverse Words in a String'/>
+        <page name='209. Minimum Size Subarray Sum'/>
     </pages>
 </playground>
