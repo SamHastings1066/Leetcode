@@ -46,5 +46,6 @@
         <page name='27. Remove Element'/>
         <page name='58. Length of Last Word'/>
         <page name='392. Is Subsequence'/>
+        <page name='383. Ransom Note'/>
     </pages>
 </playground>
