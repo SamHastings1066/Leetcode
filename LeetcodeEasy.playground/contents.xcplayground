@@ -47,5 +47,6 @@
         <page name='58. Length of Last Word'/>
         <page name='392. Is Subsequence'/>
         <page name='383. Ransom Note'/>
+        <page name='205. Isomorphic Strings'/>
     </pages>
 </playground>
