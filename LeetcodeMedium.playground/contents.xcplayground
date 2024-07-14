@@ -67,5 +67,6 @@
         <page name='289. Game of Life'/>
         <page name='128. Longest Consecutive Sequence'/>
         <page name='452. Minimum Number of Arrows to Burst Balloons '/>
+        <page name='155. Min Stack'/>
     </pages>
 </playground>

@@ -48,5 +48,6 @@
         <page name='392. Is Subsequence'/>
         <page name='383. Ransom Note'/>
         <page name='205. Isomorphic Strings'/>
+        <page name='155. Min Stack'/>
     </pages>
 </playground>
