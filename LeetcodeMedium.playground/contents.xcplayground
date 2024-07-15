@@ -68,5 +68,6 @@
         <page name='128. Longest Consecutive Sequence'/>
         <page name='452. Minimum Number of Arrows to Burst Balloons '/>
         <page name='155. Min Stack'/>
+        <page name='150. Evaluate Reverse Polish Notation'/>
     </pages>
 </playground>
