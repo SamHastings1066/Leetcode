@@ -69,5 +69,6 @@
         <page name='452. Minimum Number of Arrows to Burst Balloons '/>
         <page name='155. Min Stack'/>
         <page name='150. Evaluate Reverse Polish Notation'/>
+        <page name='138. Copy List with Random Pointer'/>
     </pages>
 </playground>
