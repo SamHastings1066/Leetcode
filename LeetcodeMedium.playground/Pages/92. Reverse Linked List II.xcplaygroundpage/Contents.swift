@@ -28,75 +28,99 @@ func printNodeValues(_ head: ListNode?) {
 }
 
 //My solution Iterative 
-class Solution {
-    func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
-        var head = head
-        var lastLeft: ListNode? = nil
-        var start: ListNode? = nil
-        var end: ListNode? = nil
-        var i = 1
-        var current = head
-        while i <= right  {
-            if i < left - 1 {
-                current = current?.next
-            }
-            else if i == left - 1 {
-                lastLeft = current
-                current = current?.next
-            } else if i == left {
-                start = current
-                end = current
-                current = current?.next
-            } else if i <= right {
-                lastLeft?.next = current
-                end?.next = current?.next
-                current?.next = start
-                start = current
-                current = end?.next
-            }
-            i += 1
-        }
-        if left == 1 { head = start}
-        return head
-    }
-}
+//class Solution {
+//    func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
+//        var head = head
+//        var lastLeft: ListNode? = nil
+//        var start: ListNode? = nil
+//        var end: ListNode? = nil
+//        var i = 1
+//        var current = head
+//        while i <= right  {
+//            if i < left - 1 {
+//                current = current?.next
+//            }
+//            else if i == left - 1 {
+//                lastLeft = current
+//                current = current?.next
+//            } else if i == left {
+//                start = current
+//                end = current
+//                current = current?.next
+//            } else if i <= right {
+//                lastLeft?.next = current
+//                end?.next = current?.next
+//                current?.next = start
+//                start = current
+//                current = end?.next
+//            }
+//            i += 1
+//        }
+//        if left == 1 { head = start}
+//        return head
+//    }
+//}
 
 // Solution recursive
 //class Solution {
 //    func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
-//        var dummy = ListNode(0, head)
+//        var dummy: ListNode? = ListNode(0, head)
 //        var before = dummy
 //        for _ in 1..<left {
-//            before = before.next!
+//            before = before?.next
 //        }
 //        reverse(before, left, right)
-//        return dummy.next
+//        return dummy?.next
 //    }
 //    
-//    func reverse(_ before: ListNode, _ left: Int, _ right: Int) -> ListNode {
-//        if left == right { return before.next! }
-//        var first = before.next!
-//        var (revSublistStart, revSublistEnd, last, after) = (ListNode(0), ListNode(0), ListNode(0), ListNode(0))
+//    func reverse(_ before: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
+//        if left == right { return before?.next }
+//        var first = before?.next
+//        var revSublistStart: ListNode?
+//        var revSublistEnd: ListNode?
+//        var last: ListNode?
+//        var after: ListNode?
 //        if right - left > 1 {
 //            revSublistEnd = reverse(first, left + 1, right - 1)
-//            revSublistStart = first.next!
-//            last = revSublistEnd.next!
+//            revSublistStart = first?.next
+//            last = revSublistEnd?.next
 //        } else {
-//            last = first.next!
+//            last = first?.next
 //            revSublistStart = first
 //            revSublistEnd = last
 //        }
-//        after = last.next!
+//        after = last?.next
 //        
 //        // Swap first and last
-//        before.next = last
-//        last.next = revSublistStart
-//        revSublistEnd.next = first
-//        first.next! = after
+//        before?.next = last
+//        last?.next = revSublistStart
+//        revSublistEnd?.next = first
+//        first?.next = after
 //        return first
 //    }
 //}
 
+// Solution iterative
+class Solution {
+    func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
+        var dummy: ListNode? = ListNode(0, head)
+        var before: ListNode? = dummy
+        for _ in 1..<left {
+            before = before?.next
+        }
+        var curr = before?.next
+        var prev = before
+        for _ in left...right {
+            var next = curr?.next
+            curr?.next = prev
+            prev = curr
+            curr = next
+        }
+        before?.next?.next = curr
+        before?.next = prev
+        return dummy?.next
+    }
+}
 
 
 var array = [3,5]
