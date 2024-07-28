@@ -71,5 +71,7 @@
         <page name='150. Evaluate Reverse Polish Notation'/>
         <page name='138. Copy List with Random Pointer'/>
         <page name='92. Reverse Linked List II'/>
+        <page name='82. Remove Duplicates from Sorted List II'/>
+        <page name='86. Partition List'/>
     </pages>
 </playground>
