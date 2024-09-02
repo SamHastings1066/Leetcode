@@ -74,5 +74,6 @@
         <page name='82. Remove Duplicates from Sorted List II'/>
         <page name='86. Partition List'/>
         <page name='146. LRU Cache'/>
+        <page name='199. Binary Tree Right Side View'/>
     </pages>
 </playground>
