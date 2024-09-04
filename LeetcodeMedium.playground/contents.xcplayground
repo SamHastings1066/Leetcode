@@ -77,5 +77,6 @@
         <page name='199. Binary Tree Right Side View'/>
         <page name='102. Binary Tree Level Order Traversal'/>
         <page name='103. Binary Tree Zigzag Level Order Traversal'/>
+        <page name='230. Kth Smallest Element in a BST'/>
     </pages>
 </playground>
