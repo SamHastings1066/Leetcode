@@ -79,5 +79,7 @@
         <page name='103. Binary Tree Zigzag Level Order Traversal'/>
         <page name='230. Kth Smallest Element in a BST'/>
         <page name='98. Validate Binary Search Tree'/>
+        <page name='909. Snakes and Ladders'/>
+        <page name='433. Minimum Genetic Mutation'/>
     </pages>
 </playground>
