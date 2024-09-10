@@ -81,5 +81,6 @@
         <page name='98. Validate Binary Search Tree'/>
         <page name='909. Snakes and Ladders'/>
         <page name='433. Minimum Genetic Mutation'/>
+        <page name='208. Implement Trie (Prefix Tree)'/>
     </pages>
 </playground>
