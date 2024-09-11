@@ -82,5 +82,6 @@
         <page name='909. Snakes and Ladders'/>
         <page name='433. Minimum Genetic Mutation'/>
         <page name='208. Implement Trie (Prefix Tree)'/>
+        <page name='211. Design Add and Search Words Data Structure'/>
     </pages>
 </playground>
