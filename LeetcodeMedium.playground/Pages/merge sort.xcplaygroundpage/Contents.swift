@@ -12,13 +12,17 @@ func merge(_ a:  [Int], _ b:  [Int]) -> [Int] {
     }
     
     while !a.isEmpty  {
-        let e = a.removeFirst()
-        c.append(e)
+        // let e = a.removeFirst()
+        // c.append(e)
+        // simpler option:
+        c.append(contentsOf: a)
     }
     
     while !b.isEmpty  {
-        let e = b.removeFirst()
-        c.append(e)
+        // let e = b.removeFirst()
+        // c.append(e)
+        // simpler option:
+        c.append(contentsOf: b)
     }
     
     return c
