@@ -11,24 +11,65 @@ public class TreeNode {
     }
 }
 
+// My solution
+//class Solution {
+//    func getMinimumDifference(_ root: TreeNode?) -> Int {
+//        var array = [Int]()
+//        DFS(root)
+//        var ans = Int.max
+//        for i in 0..<array.count-1 {
+//            ans = min(ans, array[i+1]-array[i])
+//        }
+//        
+//        return ans
+//        
+//        func DFS(_ root: TreeNode?) {
+//            guard let root else { return }
+//            DFS(root.left)
+//            array.append(root.val)
+//            DFS(root.right)
+//        }
+//    }
+//    
+//    
+//}
+
+
+//class Solution {
+//    func getMinimumDifference(_ root: TreeNode?) -> Int {
+//        var sorted = [Int]()
+//        DFS(root)
+//        var minDiff = Int.max
+//        for i in 1..<sorted.count {
+//            minDiff = min(minDiff, sorted[i] - sorted[i-1])
+//        }
+//        return minDiff
+//        
+//        func DFS(_ root: TreeNode?) {
+//            if let left = root?.left { DFS(left) }
+//            sorted.append(root!.val)
+//            if let right = root?.right { DFS(right)}
+//        }
+//    }
+//    
+//}
+
+// Without list
 class Solution {
     func getMinimumDifference(_ root: TreeNode?) -> Int {
-        var array = [Int]()
-        DFS(root)
-        var ans = Int.max
-        for i in 0..<array.count-1 {
-            ans = min(ans, array[i+1]-array[i])
-        }
+        var minDiff = Int.max
+        var last: Int? = nil
+        DFS(root!)
+        return minDiff
         
-        return ans
-        
-        func DFS(_ root: TreeNode?) {
-            guard let root else { return }
-            DFS(root.left)
-            array.append(root.val)
-            DFS(root.right)
+        func DFS(_ root: TreeNode) {
+            if let left = root.left { DFS(left) }
+            if let last {
+                minDiff = min(minDiff, root.val - last)
+            }
+            last = root.val
+            if let right = root.right { DFS(right)}
         }
     }
-    
     
 }
