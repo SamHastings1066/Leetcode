@@ -91,6 +91,15 @@ class Solution {
     }
 }
 
+func isValidSet(_ chars: [Character]) -> Bool {
+        let chars = chars.compactMap{ Int(String($0)) }
+        return Set(chars).count == chars.count
+    }
+
+
+let row = ["5","3",".",".","7",".",".",".","."]
+let r = row.compactMap{ Int($0) }
+print(r)
 
 
 var word1 = ""

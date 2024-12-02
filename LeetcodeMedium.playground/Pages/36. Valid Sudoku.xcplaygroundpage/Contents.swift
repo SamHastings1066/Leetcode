@@ -33,6 +33,32 @@ class Solution {
     }
 }
 
+// Another approach:
+//class Solution {
+//    func isValidSudoku(_ board: [[Character]]) -> Bool {
+//        let m = board.count
+//        let n = board[0].count
+//        var cols: [[Character]] = Array(repeating: [], count: 9)
+//        var squares: [[Character]] = Array(repeating: [], count: 9)
+//        for i in 0..<m {
+//            for j in 0..<n {
+//                cols[j].append(board[i][j])
+//                let index = 3 * (i / 3) + j / 3
+//                squares[index].append(board[i][j])
+//            }
+//        }
+//        for col in cols { if !isValidSet(col) {return false } }
+//        for row in board { if !isValidSet(row) {return false } }
+//        for square in squares { if !isValidSet(square) {return false } }
+//        return true
+//    }
+//
+//    func isValidSet(_ chars: [Character]) -> Bool {
+//        let chars = chars.compactMap{ Int(String($0)) }
+//        return Set(chars).count == chars.count
+//    }
+//}
+
 
 
 let board:[[Character]] = [["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
