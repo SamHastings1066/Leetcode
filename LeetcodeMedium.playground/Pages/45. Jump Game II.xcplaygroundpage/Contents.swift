@@ -21,12 +21,30 @@
 //}
 
 // Greedy
+//class Solution {
+//    func jump(_ nums: [Int]) -> Int {
+//        var jumps = 0, end = 0, far = 0, n = nums.count
+//        for i in 0..<n-1 {
+//            far = max(far, nums[i] + i)
+//            if i == end {
+//                jumps += 1
+//                end = far
+//            }
+//        }
+//        return jumps
+//    }
+//}
+
+// Slightly easier to read
 class Solution {
     func jump(_ nums: [Int]) -> Int {
-        var jumps = 0, end = 0, far = 0, n = nums.count
-        for i in 0..<n-1 {
-            far = max(far, nums[i] + i)
-            if i == end {
+        if nums.count < 2 {return 0 }
+        var jumps = 0, end = 0, far = 0
+        let finish = nums.count - 1
+        for i in nums.indices {
+            far = max(far, i + nums[i])
+            if far >= finish { return jumps + 1}
+            if end == i {
                 jumps += 1
                 end = far
             }

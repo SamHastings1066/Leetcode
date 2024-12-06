@@ -28,6 +28,19 @@ class Solution {
     }
 }
 
+// Same as above, maybe easier to read?
+//class Solution {
+//    func canJump(_ nums: [Int]) -> Bool {
+//        var end = nums.count - 1
+//        for start in (0..<nums.count-1).reversed() {
+//            if start + nums[start] >= end {
+//                end = start
+//            }
+//        }
+//        return end == 0
+//    }
+//}
+
 //var nums = [3,2,1,0,4]
 var nums = [2,3,1,1,4]
 
