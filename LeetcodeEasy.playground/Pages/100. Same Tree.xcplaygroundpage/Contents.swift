@@ -53,14 +53,28 @@ func createTree(fromArray array: [Int?]) -> TreeNode? {
 //}
 
 // Recursive
+//class Solution {
+//    func isSameTree(_ p: TreeNode?, _ q: TreeNode?) -> Bool {
+//        if p == nil && q == nil { return true }
+//        if p?.val != q?.val { return false }
+//        return isSameTree(p?.left, q?.left) && isSameTree(p?.right, q?.right)
+//    }
+//}
+
+// Iterative
 class Solution {
     func isSameTree(_ p: TreeNode?, _ q: TreeNode?) -> Bool {
-        if p == nil && q == nil { return true }
-        if p?.val != q?.val { return false }
-        return isSameTree(p?.left, q?.left) && isSameTree(p?.right, q?.right)
+        var stack = [(p,q)]
+        while !stack.isEmpty {
+            let (p,q) = stack.removeLast()
+            if p == nil && q == nil { continue }
+            if p?.val != q?.val { return false }
+            stack.append((p!.left,q!.left))
+            stack.append((p!.right,q!.right))
+        }
+        return true
     }
 }
-
 
 let tree1Root = createTree(fromArray: [1,1])
 let tree2Root = createTree(fromArray: [1,1])
