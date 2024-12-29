@@ -81,13 +81,34 @@ func levelOrderTraversal(_ rootNode: TreeNode?) -> [Int?] {
 //    }
 //}
 
+// Recursive
+//class Solution {
+//    func maxDepth(_ root: TreeNode?) -> Int {
+//        guard root != nil else {return 0}
+//        
+//        let leftDepth = maxDepth(root?.left)
+//        let rightDepth = maxDepth(root?.right)
+//        return max(leftDepth, rightDepth) + 1
+//    }
+//}
+
+// Iterative
 class Solution {
     func maxDepth(_ root: TreeNode?) -> Int {
-        guard root != nil else {return 0}
-        
-        let leftDepth = maxDepth(root?.left)
-        let rightDepth = maxDepth(root?.right)
-        return max(leftDepth, rightDepth) + 1
+        guard let root else { return 0 }
+        var stack = [(root,1)]
+        var depth = 0
+        while !stack.isEmpty {
+            let (node, currentDepth) = stack.removeLast()
+            depth = max(depth, currentDepth)
+            if let left = node.left {
+                stack.append((left, currentDepth + 1))
+            }
+            if let right = node.right {
+                stack.append((right, currentDepth + 1))
+            }
+        }
+        return depth
     }
 }
 
