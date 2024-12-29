@@ -84,6 +84,21 @@ class Solution {
     }
 }
 
+// Recursive
+//class Solution {
+//    func hasPathSum(_ root: TreeNode?, _ targetSum: Int) -> Bool {
+//        guard let root else { return false }
+//        // handle base case: root has no children -> return targetSum == root.val
+//        if root.left == nil && root.right == nil {
+//            return root.val == targetSum
+//        }
+//        /* relationship with children
+//        return  (hasPathSum(left, targetSum - current val) or hasPathSum(right, targetSum - current val))
+//        */
+//        return (hasPathSum(root.left, targetSum - root.val) || hasPathSum(root.right, targetSum - root.val))
+//    }
+//}
+
 var rootArray = [5,4,8,11,nil,13,4,7,2,nil,nil,nil,1]
 var treeRoot = createTree(fromArray: rootArray)
 print(Solution().hasPathSum(treeRoot, 22))
