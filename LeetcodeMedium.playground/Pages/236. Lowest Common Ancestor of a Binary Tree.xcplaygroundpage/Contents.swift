@@ -70,24 +70,52 @@ func createTree(fromArray array: [Int?]) -> TreeNode? {
 //}
 
 // DFS
+//class Solution {
+//    
+//    var ans: TreeNode?
+//    
+//    func lowestCommonAncestor(_ root: TreeNode?, _ p: TreeNode?, _ q: TreeNode?) -> TreeNode? {
+//        func recursiveSearch(_ node: TreeNode?) -> Int {
+//            if node == nil {return 0}
+//            var left = recursiveSearch(node?.left)
+//            var right = recursiveSearch(node?.right)
+//            var mid = node?.val == p?.val || node?.val == q?.val ? 1 : 0
+//            if mid + left + right >= 2 { ans = node }
+//            return mid == 1 || left == 1 || right == 1 ? 1 : 0
+//        }
+//        recursiveSearch(root)
+//        return ans
+//    }
+//}
+
+
+// Recursive, 3 cases:
 class Solution {
-    
-    var ans: TreeNode?
-    
     func lowestCommonAncestor(_ root: TreeNode?, _ p: TreeNode?, _ q: TreeNode?) -> TreeNode? {
-        func recursiveSearch(_ node: TreeNode?) -> Int {
-            if node == nil {return 0}
-            var left = recursiveSearch(node?.left)
-            var right = recursiveSearch(node?.right)
-            var mid = node?.val == p?.val || node?.val == q?.val ? 1 : 0
-            if mid + left + right >= 2 { ans = node }
-            return mid == 1 || left == 1 || right == 1 ? 1 : 0
+        // Base case
+        guard let root else { return nil }
+        
+        // Case 1
+        if root === p || root === q {
+        return root
         }
-        recursiveSearch(root)
-        return ans
+
+        let left = lowestCommonAncestor(root.left, p, q)
+        let right = lowestCommonAncestor(root.right, p, q)
+
+        // Case 2
+        if left != nil && right != nil {
+        return root
+        }
+        
+        // Case 3
+        if left != nil {
+        return left
+        }
+
+        return right
     }
 }
-
 
 
 let rootArray = [1,2]
