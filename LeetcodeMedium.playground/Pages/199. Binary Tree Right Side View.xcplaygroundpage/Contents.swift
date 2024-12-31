@@ -84,3 +84,23 @@ class Solution {
         }
     }
 }
+
+// BFS
+//class Solution {
+//    func rightSideView(_ root: TreeNode?) -> [Int] {
+//        var ans = [Int]()
+//        var queue = [root]
+//        while !queue.isEmpty {
+//            let currLevelCount = queue.count
+//            for i in 1...currLevelCount {
+//                let node = queue.removeFirst()
+//                if let node {
+//                    if i == currLevelCount {ans.append(node.val)}
+//                    if let left = node.left {queue.append(left)}
+//                    if let right = node.right {queue.append(right)}
+//                }
+//            }
+//        }
+//        return ans
+//    }
+//}
