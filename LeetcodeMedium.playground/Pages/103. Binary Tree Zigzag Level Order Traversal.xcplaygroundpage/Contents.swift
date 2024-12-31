@@ -38,35 +38,63 @@ public class TreeNode {
 //    }
 //}
 
-//BFS iterative
+//BFS iterative - Time: O(n^2), because the `ans[level].insert(_:at:)` operation is O(k) where k is the length of `ans[level]`. This operation is done queue.count times every time `leftToRight` is false.
+//class Solution {
+//    func zigzagLevelOrder(_ root: TreeNode?) -> [[Int]] {
+//        if root == nil { return [] }
+//        var ans = [[Int]]()
+//        var level = 0
+//        var leftToRight = true
+//        var queue = [root!]
+//        
+//        while !queue.isEmpty {
+//            ans.append([])
+//            for _ in 0..<queue.count {
+//                var node = queue.removeFirst()
+//                if leftToRight {
+//                    ans[level].append(node.val)
+//                } else {
+//                    ans[level].insert(node.val, at: 0)
+//                }
+//                if let left = node.left {
+//                    queue.append(left)
+//                }
+//                if let right = node.right {
+//                    queue.append(right)
+//                }
+//            }
+//            leftToRight.toggle()
+//            level += 1
+//        }
+//        
+//        return ans
+//    }
+//}
+
+/* Correct O(n) solution:
+- Reversing a row of k nodes has O(k) complexity.
+- Across all levels, the total number of nodes is n, so reversing contributes O(n) in total.
+*/
+
 class Solution {
     func zigzagLevelOrder(_ root: TreeNode?) -> [[Int]] {
-        if root == nil { return [] }
+        guard let root else { return [] }
         var ans = [[Int]]()
-        var level = 0
+        var queue = [root]
         var leftToRight = true
-        var queue = [root!]
-        
         while !queue.isEmpty {
-            ans.append([])
-            for _ in 0..<queue.count {
-                var node = queue.removeFirst()
-                if leftToRight {
-                    ans[level].append(node.val)
-                } else {
-                    ans[level].insert(node.val, at: 0)
-                }
-                if let left = node.left {
-                    queue.append(left)
-                }
-                if let right = node.right {
-                    queue.append(right)
-                }
+            let rowCount = queue.count
+            var currRow = [Int]()
+            for i in 0..<rowCount {
+                let node = queue.removeFirst()
+                currRow.append(node.val)
+                if let left = node.left { queue.append(left) }
+                if let right = node.right { queue.append(right) }
             }
+            ans.append(leftToRight ? currRow : currRow.reversed())
             leftToRight.toggle()
-            level += 1
         }
-        
         return ans
     }
 }
+
