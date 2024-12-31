@@ -20,9 +20,11 @@ class Solution {
         func dfs(_ node: TreeNode?) {
             guard let node else { return }
             if node.val >= low && node.val <= high { ans += node.val }
+            // Only bother to search right subtree if the current node value is less than high, since if node.val > high, right subtree will only have values larger than high.
             if node.val < high {
                 dfs(node.right)
             }
+            // Only bother to search left subtree if the current node value is greater than low, since if node.val < low, left subtree will only have values smaller than low.
             if node.val > low {
                 dfs(node.left)
             }
