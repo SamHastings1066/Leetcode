@@ -1,4 +1,3 @@
-Definition for a binary tree node.
 public class TreeNode {
     public var val: Int
     public var left: TreeNode?
@@ -14,6 +13,16 @@ public class TreeNode {
 
 class Solution {
     func diameterOfBinaryTree(_ root: TreeNode?) -> Int {
-        
+        var ans = 0
+        func findDepth(_ node: TreeNode?) -> Int {
+            guard let node else { return 0 }
+            let leftDepth = findDepth(node.left)
+            let rightDepth = findDepth(node.right)
+            let diam = leftDepth + rightDepth
+            ans = max(ans, diam)
+            return 1 + max(leftDepth, rightDepth)
+        }
+        findDepth(root)
+        return ans
     }
 }
