@@ -68,3 +68,22 @@ class Solution {
         return inorder(node.right)
     }
 }
+
+// Same approach
+//class Solution {
+//
+//    var prev: Int?
+//    
+//    func isValidBST(_ root: TreeNode?) -> Bool {
+//        return inOrder(root)
+//    }
+//
+//    func inOrder(_ node: TreeNode?) -> Bool {
+//        guard let node else { return true }
+//        let leftIsBST = inOrder(node.left)
+//        if let prev, node.val <= prev { return false }
+//        prev = node.val
+//        let rightIsBST = inOrder(node.right)
+//        return leftIsBST && rightIsBST
+//    }
+//}
