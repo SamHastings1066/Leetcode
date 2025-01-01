@@ -22,7 +22,21 @@ func createConnectedGraph(_ edges: [[Int]]) -> Node {
     return newNodes[0]
 }
 
-var edges = [[2,4],[1,3],[2,4],[1,3]]
+func createHashMapGraph(from edges: [[Int]]) -> [Int:[Int]] {
+    var graph = [Int:[Int]]()
+    for (edge) in edges {
+        let x = edge[0]
+        let y = edge[1]
+        graph[x, default:[]].append(y)
+        graph[y, default:[]].append(x) // comment out this line if graph is directed
+    }
+    return graph
+}
+
+var edges = [[0, 1], [1, 2], [2, 0], [2, 3]]
+
+let hashGraph = createHashMapGraph(from: edges)
+print(hashGraph)
 
 var headNode = createConnectedGraph(edges)
 
